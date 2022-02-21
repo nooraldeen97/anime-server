@@ -12,7 +12,7 @@ app.use(express.json());
 
 const client = new pg.Client({
     connectionString: process.env.DATABASE_URL,
-    // ssl: { rejectUnauthorized: false }
+    ssl: { rejectUnauthorized: false }
 })
 
 app.get("/", homeHandler);
